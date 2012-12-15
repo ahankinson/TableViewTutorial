@@ -1,0 +1,3 @@
+Django==1.4.3
+-e git+https://github.com/tomchristie/django-rest-framework.git@ff01ae3571298b9da67f9b9583f0cb264676ed2b#egg=djangorestframework-dev
+wsgiref==0.1.2
