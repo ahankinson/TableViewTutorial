@@ -6,7 +6,6 @@ from rest_framework import permissions
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from projectmanager.generics import RetrievePartialUpdateDestroyAPIView
 
 from projectmanager.models import Project
 from projectmanager.serializers import ProjectSerializer
@@ -30,7 +29,7 @@ class ProjectList(generics.ListCreateAPIView):
     serializer_class = ProjectSerializer
 
 
-class ProjectDetail(RetrievePartialUpdateDestroyAPIView):
+class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):
     model = Project
     permission_classes = (permissions.AllowAny,)
     serializer_class = ProjectSerializer
